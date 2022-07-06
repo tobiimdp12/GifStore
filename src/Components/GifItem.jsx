@@ -4,6 +4,7 @@ import Loader from "./Loader/Loader";
 import ButtonDownload from "./Buttons/ButtonDownload/ButtonDownload";
 import LikedGif from "../Helpers/LikedGif";
 import Swal from "sweetalert2";
+import 'animate.css';
 
 function GifItem({ gif }) {
 
@@ -28,7 +29,7 @@ function GifItem({ gif }) {
         <Loader />
       ) : (
         <div>
-          <div className="card">
+          <div className="card animate__animated animate__fadeInTopRight   animate__slow">
             <ButtonDownload gif={gif} />
             <ButtonCard gif={gif} handleLiked={isLiked} />
             <img src={gif.url} alt="gif" onClick={handleModal} />
