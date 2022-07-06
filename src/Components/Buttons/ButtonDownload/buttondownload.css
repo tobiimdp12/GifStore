@@ -1,0 +1,16 @@
+.download {
+  position: absolute !important;
+  left: 0;
+  top: 0;
+  margin-top: 0 !important;
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+
+}
+
+.download :hover {
+  color: var(--primary-color);
+  transition: all .20s ease-in-out;
+}

@@ -1,9 +1,16 @@
-.navbar__container
-{
-    display: flex;
-    justify-content: space-between;
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+}
+@media (max-width: 800px) {
+  .navbar__container {
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     width: 100%;
-    flex-wrap: wrap;
-    margin-bottom: 100px;
+  }
 }
