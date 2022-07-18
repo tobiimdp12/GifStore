@@ -6,6 +6,7 @@ import LikedGif from "../Helpers/LikedGif";
 import Swal from "sweetalert2";
 import 'animate.css';
 
+
 function GifItem({ gif }) {
 
   const handleModal = () => {
@@ -13,7 +14,6 @@ function GifItem({ gif }) {
       imageUrl: gif.url,
       imageWidth: 400,
       imageHeight: "80%",
-
       imageAlt: "Custom image",
       color: "#fff",
       background: "#000",
@@ -21,7 +21,7 @@ function GifItem({ gif }) {
     });
   };
 
-  let isLiked = LikedGif(gif);
+  let isLiked = LikedGif(gif);//-
 
   return (
     <div>
@@ -32,7 +32,7 @@ function GifItem({ gif }) {
           <div className="card animate__animated animate__fadeInTopRight   animate__slow">
             <ButtonDownload gif={gif} />
             <ButtonCard gif={gif} handleLiked={isLiked} />
-            <img src={gif.url} alt="gif" onClick={handleModal} />
+            <img src={gif.url} alt="gif" onClick={handleModal} role="img" />
             <p>{gif.title}</p>
           </div>
         </div>

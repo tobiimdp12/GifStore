@@ -6,12 +6,12 @@ export function AddCategoryForm({ addCategory }) {
   const handleOnSubmit = (e) => {
     e.preventDefault();
   
-    if (inputValue.trim() < 1 || !/^[a-zA-Z]+$/.test(inputValue)) return;
+    if (inputValue.trim() < 1 || !/^[a-zA-Z\s]+$/.test(inputValue)) return;
     addCategory(inputValue.trim());
     setInputValue("");
   };
   return (
-    <form onSubmit={handleOnSubmit}>
+    <form onSubmit={handleOnSubmit} role="form">
       <input
         type={"text"}
         placeholder="Buscar un gif"

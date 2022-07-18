@@ -1,6 +1,7 @@
 import React from "react";
 import ButtonCategory from "./Buttons/ButtonCategories/ButtonCategory";
 import { GifGrid } from "./GifGrid";
+import PropTypes from "prop-types";
 
 export function Category({ category, categories, updateCategories }) {
   const handleUpdate = () => {
@@ -18,3 +19,9 @@ export function Category({ category, categories, updateCategories }) {
     </div>
   );
 }
+
+Category.propTypes = {
+  category: PropTypes.string.isRequired,
+  categories: PropTypes.array.isRequired,
+  updateCategories: PropTypes.func.isRequired,
+};

@@ -3,7 +3,7 @@ import { AddCategoryForm, Category } from "./";
 import ButtonCategory from "./Buttons/ButtonCategories/ButtonCategory";
 
 function CategoryGifs() {
-  const [categories, setCategories] = useState(["Dragon ball", "bakugan"]);
+  const [categories, setCategories] = useState(["bahugan"]);
 
   const handleAddCategories = (value) => {
     setCategories([value, ...categories]);
@@ -12,7 +12,6 @@ function CategoryGifs() {
     if (JSON.parse(localStorage.getItem("favorites")) == null) {
       const favoritesGif = [];
       localStorage.setItem("favorites", JSON.stringify(favoritesGif));
-
     }
   }, []);
   return (
@@ -41,7 +40,7 @@ function CategoryGifs() {
           </div>
         ))
       ) : (
-        <h2>Search your first category :)</h2>
+        <h2 data-testid="test-clear">Search your first category :)</h2>
       )}
     </div>
   );

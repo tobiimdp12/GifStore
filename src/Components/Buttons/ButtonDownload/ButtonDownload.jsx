@@ -3,6 +3,7 @@ import { AiOutlineCloudDownload } from "react-icons/ai";
 import Swal from "sweetalert2";
 import "./buttondownload.css";
 function ButtonDownload({ gif }) {
+  
   const handleClick = async () => {
     try {
       var xhr = new XMLHttpRequest();

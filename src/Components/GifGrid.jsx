@@ -4,14 +4,15 @@ import Loader from "./Loader/Loader";
 
 export const GifGrid = ({ category }) => {
   const { gifs, loading } = useFetchGif(category);
-
+  
   return (
     <>
       <div className="card-grid">
-        {loading ? (
+        {loading || gifs!==undefined? (
          <Loader/>
         ) : (
-          gifs.map((gif) => <GifItem key={gif.id} gif={gif} />)
+  
+          gifs?.map((gif) => <GifItem key={gif.id} gif={gif} />)
         )}
       </div>
     </>
