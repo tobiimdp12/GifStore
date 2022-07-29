@@ -20,8 +20,4 @@ export function Category({ category, categories, updateCategories }) {
   );
 }
 
-Category.propTypes = {
-  category: PropTypes.string.isRequired,
-  categories: PropTypes.array.isRequired,
-  updateCategories: PropTypes.func.isRequired,
-};
+

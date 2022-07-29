@@ -8,7 +8,7 @@ export const GifGrid = ({ category }) => {
   return (
     <>
       <div className="card-grid">
-        {loading || gifs!==undefined? (
+        {loading? (
          <Loader/>
         ) : (
   

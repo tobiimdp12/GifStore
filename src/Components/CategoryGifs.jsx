@@ -3,7 +3,7 @@ import { AddCategoryForm, Category } from "./";
 import ButtonCategory from "./Buttons/ButtonCategories/ButtonCategory";
 
 function CategoryGifs() {
-  const [categories, setCategories] = useState(["bahugan"]);
+  const [categories, setCategories] = useState(["Dragon ball", "bakugan"]);
 
   const handleAddCategories = (value) => {
     setCategories([value, ...categories]);
@@ -30,17 +30,18 @@ function CategoryGifs() {
       />
 
       {categories.length !== 0 ? (
-        categories.map((category) => (
+        categories.map((category, index) => (
           <div>
             <Category
               category={category}
               categories={categories}
               updateCategories={setCategories}
+              key={category}
             />
           </div>
         ))
       ) : (
-        <h2 data-testid="test-clear">Search your first category :)</h2>
+        <h2>Search your first category :)</h2>
       )}
     </div>
   );
